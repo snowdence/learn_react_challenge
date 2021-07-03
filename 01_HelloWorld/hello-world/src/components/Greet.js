@@ -16,4 +16,11 @@ const GreetFunction = () => {
   );
 };
 
-export { Greet, GreetFunction };
+const Hello = () => {
+  return React.createElement(
+    "div",
+    null,
+    React.createElement("h1", null, "Hello")
+  );
+};
+export { Greet, GreetFunction, Hello };
