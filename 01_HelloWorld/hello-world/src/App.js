@@ -1,14 +1,19 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Hello } from "./components/Greet";
+import { Greet } from "./components/Greet";
 import Welcome from "./components/Welcome";
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Hello />
-
+        <Greet name="snowdence">
+          <p>This is children </p>
+        </Greet>
+        <Greet name="Clark">
+          <button>Action</button>
+        </Greet>
+        <Greet name="Dinana" />
         <p>
           Edit <b>snowdence</b> <code>src/App.js</code> and save to reload.
         </p>

@@ -1,9 +1,11 @@
 import React from "react";
 
-function Greet() {
+function Greet(props) {
+  console.log(props);
   return (
     <div>
-      <h1> Hello, Snowdence</h1>
+      <h1> Hello, {props.name}</h1>
+      {props.children}
     </div>
   );
 }
