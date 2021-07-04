@@ -21,13 +21,14 @@ import LifecycleA from "./components/customs/LifecycleA";
 import ParentComp from "./components/customs/ParentComp";
 import RefsDemo from "./components/customs/RefsDemo";
 import FocusInput from "./components/customs/FocusInput";
+import FRParentInput from "./components/customs/FRParentInput";
 
 import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <FocusInput />
+      <FRParentInput />
     </div>
   );
 }
