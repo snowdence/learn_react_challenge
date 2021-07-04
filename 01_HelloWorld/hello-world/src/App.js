@@ -15,11 +15,11 @@ import styles from "./appStyles.module.css";
 import "./App.css";
 import StyledComponent from "./components/customs/StyledComponent";
 import { Animation, StyledButton } from "./components/customs/Animation";
+import Form from "./components/customs/Form";
 function App() {
   return (
     <div className="App">
-      <Animation />
-      <StyledButton primary />
+      <Form />
     </div>
   );
 }
