@@ -19,7 +19,18 @@ const Rotate = styled.div`
   font-size: 1.2rem;
 `;
 
-export default class Animation extends Component {
+const Button = styled.button`
+  background: ${(props) => (props.primary ? "palevioletred" : "white")};
+  color: ${(props) => (props.primary ? "white" : "palevioletred")};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
+export class Animation extends Component {
   render() {
     return (
       <div>
@@ -27,4 +38,7 @@ export default class Animation extends Component {
       </div>
     );
   }
+}
+export function StyledButton(props) {
+  return <Button {...props}>Button</Button>;
 }

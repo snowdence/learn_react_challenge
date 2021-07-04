@@ -14,11 +14,12 @@ import "./appStyles.css";
 import styles from "./appStyles.module.css";
 import "./App.css";
 import StyledComponent from "./components/customs/StyledComponent";
-import Animation from "./components/customs/Animation";
+import { Animation, StyledButton } from "./components/customs/Animation";
 function App() {
   return (
     <div className="App">
       <Animation />
+      <StyledButton primary />
     </div>
   );
 }
