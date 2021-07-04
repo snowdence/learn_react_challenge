@@ -7,7 +7,12 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <Greet name="snowdence" age="11">
+        {" Chao"}
+      </Greet>
+      <Welcome name="snowdence" age="11">
+        {" Chao"}
+      </Welcome>
     </div>
   );
 }
