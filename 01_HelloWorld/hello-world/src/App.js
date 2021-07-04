@@ -19,13 +19,14 @@ import Form from "./components/customs/Form";
 import Fragment from "./components/customs/Fragment";
 import LifecycleA from "./components/customs/LifecycleA";
 import ParentComp from "./components/customs/ParentComp";
+import RefsDemo from "./components/customs/RefsDemo";
 
 import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <ParentComp></ParentComp>
+      <RefsDemo></RefsDemo>
     </div>
   );
 }
