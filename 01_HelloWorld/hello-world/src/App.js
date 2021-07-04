@@ -20,13 +20,14 @@ import Fragment from "./components/customs/Fragment";
 import LifecycleA from "./components/customs/LifecycleA";
 import ParentComp from "./components/customs/ParentComp";
 import RefsDemo from "./components/customs/RefsDemo";
+import FocusInput from "./components/customs/FocusInput";
 
 import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <RefsDemo></RefsDemo>
+      <FocusInput />
     </div>
   );
 }
