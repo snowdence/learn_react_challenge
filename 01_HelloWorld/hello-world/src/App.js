@@ -18,13 +18,14 @@ import { Animation, StyledButton } from "./components/customs/Animation";
 import Form from "./components/customs/Form";
 import Fragment from "./components/customs/Fragment";
 import LifecycleA from "./components/customs/LifecycleA";
+import ParentComp from "./components/customs/ParentComp";
 
 import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <Fragment />
+      <ParentComp></ParentComp>
     </div>
   );
 }
