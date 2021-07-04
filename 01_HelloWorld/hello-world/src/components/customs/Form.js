@@ -29,17 +29,18 @@ export default class Form extends Component {
     e.preventDefault();
   };
   render() {
+    const { username, comment, topic } = this.state;
     return (
       <div>
-        Inputed : {this.state.username} <br />
-        Comment : {this.state.comment} <br />
-        Topic : {this.state.topic}
+        Inputed : {username} <br />
+        Comment : {comment} <br />
+        Topic : {topic}
         <form>
           <div>
             <label>UserName: </label>
             <input
               type="text"
-              value={this.state.username}
+              value={username}
               onChange={this.handleUserChange}
             />
           </div>
@@ -48,12 +49,12 @@ export default class Form extends Component {
 
             <input
               type="text"
-              value={this.state.comment}
+              value={comment}
               onChange={this.handleCommentChange}
             />
           </div>
           <div>
-            <select value={this.state.topic} onChange={this.handleTopicChange}>
+            <select value={topic} onChange={this.handleTopicChange}>
               <option value="react">React</option>
               <option value="vue">Vue</option>
             </select>
