@@ -16,10 +16,11 @@ import "./App.css";
 import StyledComponent from "./components/customs/StyledComponent";
 import { Animation, StyledButton } from "./components/customs/Animation";
 import Form from "./components/customs/Form";
+import LifecycleA from "./components/customs/LifecycleA";
 function App() {
   return (
     <div className="App">
-      <Form />
+      <LifecycleA />
     </div>
   );
 }
