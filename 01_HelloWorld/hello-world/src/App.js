@@ -14,15 +14,11 @@ import "./appStyles.css";
 import styles from "./appStyles.module.css";
 import "./App.css";
 import StyledComponent from "./components/customs/StyledComponent";
+import Animation from "./components/customs/Animation";
 function App() {
   return (
     <div className="App">
-      <StyledComponent />
-
-      <StyleSheet primary={false} />
-      <Inline primary={false} />
-      <h1 className={styles.success}> Success</h1>
-      <h1 className="error"> Error</h1>
+      <Animation />
     </div>
   );
 }
