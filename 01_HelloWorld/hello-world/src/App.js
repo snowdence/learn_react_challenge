@@ -33,12 +33,13 @@ import Counter from "./components/Day3/Counter";
 import HoverCounterTwo from "components/Day3/HoverCounterTwo";
 import ComponentC from "components/Day3/Context/ComponentC";
 import { UserProvider } from "components/Day3/Context/useContext";
+import ComponentE from "components/Day3/Context/ComponentE";
 
 function App() {
   return (
     <div className="App">
       <UserProvider value="snowdence">
-        <ComponentC />
+        <ComponentE />
       </UserProvider>
     </div>
   );
