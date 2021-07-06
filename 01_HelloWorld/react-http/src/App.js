@@ -1,11 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-import IntervalCounter from "components/start_effect/IntervalCounter";
+import DataFetching from "components/start_effect/DataFetching";
 function App() {
   return (
     <div className="App">
-      <IntervalCounter />
+      <DataFetching />
     </div>
   );
 }
