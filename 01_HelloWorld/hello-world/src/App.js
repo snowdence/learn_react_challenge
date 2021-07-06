@@ -36,13 +36,7 @@ import { UserProvider } from "components/Day3/Context/useContext";
 import ComponentE from "components/Day3/Context/ComponentE";
 
 function App() {
-  return (
-    <div className="App">
-      <UserProvider value="snowdence">
-        <ComponentE />
-      </UserProvider>
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
