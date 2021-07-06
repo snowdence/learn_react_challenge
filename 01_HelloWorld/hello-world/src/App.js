@@ -26,10 +26,15 @@ import PortalDemo from "./components/customs/PortalDemo";
 
 import React from "react";
 
+import ClickCounter from "components/Day3/ClickCounter";
+import HoverCounter from "components/Day3/HoverCounter";
+
 function App() {
   return (
     <div className="App">
-      <PortalDemo />
+      <ClickCounter />
+
+      <HoverCounter />
     </div>
   );
 }
