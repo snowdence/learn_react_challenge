@@ -1,6 +1,6 @@
 import React from "react";
 
-const withCounter = (WarapComponent) => {
+const withCounter = (WarapComponent, incNumber) => {
   class NewComponent extends React.Component {
     constructor(props) {
       super(props);
@@ -11,7 +11,7 @@ const withCounter = (WarapComponent) => {
     increaseCount = () => {
       this.setState((prevState) => {
         return {
-          count: prevState.count + 1,
+          count: prevState.count + incNumber,
         };
       });
     };
@@ -20,6 +20,7 @@ const withCounter = (WarapComponent) => {
         <WarapComponent
           count={this.state.count}
           increaseCount={this.increaseCount}
+          {...this.props}
         />
       );
     }

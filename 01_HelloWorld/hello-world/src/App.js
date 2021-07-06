@@ -2,7 +2,6 @@ import logo from "./logo.svg";
 import { Greet } from "./components/Greet";
 import Message from "./components/Message";
 import Welcome from "./components/Welcome";
-import Counter from "./components/Counter";
 import ClassClick from "./components/FunctionClick";
 import EventBind from "./components/EventBind";
 import ParentComponent from "./components/ParentComponent";
@@ -28,13 +27,26 @@ import React from "react";
 
 import ClickCounter from "components/Day3/ClickCounter";
 import HoverCounter from "components/Day3/HoverCounter";
+import ClickCounterTwo from "components/Day3/ClickCounterTwo";
+import User from "components/Day3/User";
+import Counter from "./components/Day3/Counter";
+import HoverCounterTwo from "components/Day3/HoverCounterTwo";
 
 function App() {
   return (
     <div className="App">
-      <ClickCounter />
-
-      <HoverCounter />
+      {/* <ClickCounterTwo /> */}
+      {/* <User render={(isLoggedIn) => (isLoggedIn ? "Snowdence" : "Guest")} /> */}
+      <Counter
+        render={(count, increaseCount) => (
+          <ClickCounterTwo count={count} increaseCount={increaseCount} />
+        )}
+      />
+      <Counter
+        render={(count, increaseCount) => (
+          <HoverCounterTwo count={count} increaseCount={increaseCount} />
+        )}
+      />
     </div>
   );
 }
