@@ -22,13 +22,14 @@ import ParentComp from "./components/customs/ParentComp";
 import RefsDemo from "./components/customs/RefsDemo";
 import FocusInput from "./components/customs/FocusInput";
 import FRParentInput from "./components/customs/FRParentInput";
+import PortalDemo from "./components/customs/PortalDemo";
 
 import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <FRParentInput />
+      <PortalDemo />
     </div>
   );
 }
