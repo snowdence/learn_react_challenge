@@ -1,13 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React, { useReducer } from "react";
-import DataFetchingOne from "components/start_reducer/DataFetchingOne";
+import Parent from "components/start_callback/Parent";
 
 function App() {
   return (
     <div className="App">
       <h1> App </h1>
-      <DataFetchingOne />
+      <Parent />
     </div>
   );
 }

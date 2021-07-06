@@ -26,7 +26,7 @@ function DataFetchingOne() {
 
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/pxosts/1 `)
+      .get(`https://jsonplaceholder.typicode.com/posts/1 `)
       .then((response) => {
         dispatch({ type: "FETCH_SUCESS", payload: response.data });
       })
