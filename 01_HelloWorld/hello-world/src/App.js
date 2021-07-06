@@ -31,22 +31,15 @@ import ClickCounterTwo from "components/Day3/ClickCounterTwo";
 import User from "components/Day3/User";
 import Counter from "./components/Day3/Counter";
 import HoverCounterTwo from "components/Day3/HoverCounterTwo";
+import ComponentC from "components/Day3/Context/ComponentC";
+import { UserProvider } from "components/Day3/Context/useContext";
 
 function App() {
   return (
     <div className="App">
-      {/* <ClickCounterTwo /> */}
-      {/* <User render={(isLoggedIn) => (isLoggedIn ? "Snowdence" : "Guest")} /> */}
-      <Counter
-        render={(count, increaseCount) => (
-          <ClickCounterTwo count={count} increaseCount={increaseCount} />
-        )}
-      />
-      <Counter
-        render={(count, increaseCount) => (
-          <HoverCounterTwo count={count} increaseCount={increaseCount} />
-        )}
-      />
+      <UserProvider value="snowdence">
+        <ComponentC />
+      </UserProvider>
     </div>
   );
 }
