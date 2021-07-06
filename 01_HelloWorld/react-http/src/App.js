@@ -4,7 +4,7 @@ import React from "react";
 import ComponentC from "components/context/ComponentC";
 
 export const UserContext = React.createContext("user");
-export const ChannelContext = React.createContext("channel");
+export const ChannelContext = React.createContext("channel1");
 function App() {
   return (
     <div className="App">
