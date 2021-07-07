@@ -8,12 +8,12 @@ import DocTitleOne from "./components/custom-hook/DocTitleOne";
 import DocTitleTwo from "./components/custom-hook/DocTitleTwo";
 import CountOne from "components/custom-hook/CountOne";
 import CountTwo from "components/custom-hook/CountTwo";
+import UserForm from "components/custom-hook/UserForm";
 function App() {
   return (
     <div className="App">
       <h1> App </h1>
-      <CountOne />
-      <CountTwo />
+      <UserForm />
     </div>
   );
 }
