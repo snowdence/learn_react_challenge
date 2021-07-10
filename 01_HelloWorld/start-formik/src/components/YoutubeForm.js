@@ -14,11 +14,16 @@ const validationSchema = Yup.object({
 });
 
 const initialValues = {
-  name: "",
-  email: "",
-  channel: "",
-  comments: "",
-  address: "",
+  name: "Tran Minh Duc",
+  email: "admin@wifosoft.com",
+  channel: "youtube",
+  comments: "abds",
+  address: "Viet nam",
+  social: {
+    facebook: "",
+    twitter: "",
+  },
+  phoneNumber: ["", ""],
 };
 function YoutubeForm() {
   return (
@@ -72,6 +77,26 @@ function YoutubeForm() {
                 );
               }}
             </Field>
+          </div>
+
+          <div className="form-control">
+            <label htmlFor="facebook">Facebook</label>
+            <Field type="text" id="facebook" name="social.facebook" />
+          </div>
+
+          <div className="form-control">
+            <label htmlFor="twitter">Twitter</label>
+            <Field type="text" id="twitter" name="social.twitter" />
+          </div>
+
+          <div className="form-control">
+            <label htmlFor="phone1">PhoneNumber 1</label>
+            <Field type="text" id="phone1" name="phoneNumber[0]" />
+          </div>
+
+          <div className="form-control">
+            <label htmlFor="phone2">PhoneNumber 2</label>
+            <Field type="text" id="phone2" name="phoneNumber[1]" />
           </div>
 
           <button type="submit">Submit</button>
