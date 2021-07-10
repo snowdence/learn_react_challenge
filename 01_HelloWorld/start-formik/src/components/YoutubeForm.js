@@ -14,10 +14,18 @@ const onSubmit = (values) => {
   console.log("onSubmit()");
   console.log(values);
 };
+const validateComments = (value) => {
+  let error;
+  if (!value) {
+    error = "Required";
+  }
+  return error;
+};
 const validationSchema = Yup.object({
   name: Yup.string().required("Required"),
   email: Yup.string().email("Invalid email format").required("Required"),
   channel: Yup.string().required("Required"),
+  //comments: Yup.string().required("Required"),
 });
 
 const initialValues = {
@@ -65,7 +73,12 @@ function YoutubeForm() {
           </div>
           <div className="form-control">
             <label htmlFor="comments">Comments</label>
-            <Field as="textarea" id="comments" name="comments"></Field>
+            <Field
+              as="textarea"
+              id="comments"
+              name="comments"
+              validate={validateComments}
+            ></Field>
             <ErrorMessage name="comments" component={TextError} />
           </div>
 
@@ -73,9 +86,8 @@ function YoutubeForm() {
             <label htmlFor="address">Address</label>
             <FastField name="address">
               {(props) => {
-                console.log("Field render");
                 const { field, form, meta } = props;
-                //console.log(props);
+                //conscole.log(props);
                 return (
                   <div>
                     <input id="address" type="text" {...field} />
@@ -115,7 +127,7 @@ function YoutubeForm() {
                 const { push, remove, form } = fieldArrayProps;
                 const { values } = form;
                 const { phNumbers } = values;
-
+                //console.log("Form error", form.errors);
                 return (
                   <div>
                     {phNumbers.map((phNumber, index) => {
