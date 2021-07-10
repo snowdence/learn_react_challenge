@@ -30,13 +30,14 @@ const validate = (values) => {
 function YoutubeForm() {
   const formik = useFormik({
     initialValues: {
-      name: "Tran Minh Duc",
-      email: "admin@wifosoft.ccom",
-      channel: "Wifosoft",
+      name: "",
+      email: "",
+      channel: "",
     },
     onSubmit,
     validate,
   });
+  console.log("Visited ", formik.touched);
   return (
     <div>
       <h1>Youtube Form</h1>
@@ -49,6 +50,7 @@ function YoutubeForm() {
             name="name"
             onChange={formik.handleChange}
             value={formik.values.name}
+            onBlur={formik.handleBlur}
           />
           {formik.errors.name ? (
             <div id="error"> {formik.errors.name}</div>
@@ -64,6 +66,7 @@ function YoutubeForm() {
             name="email"
             onChange={formik.handleChange}
             value={formik.values.email}
+            onBlur={formik.handleBlur}
           />
           {formik.errors.email ? (
             <div id="error"> {formik.errors.email} </div>
@@ -80,6 +83,7 @@ function YoutubeForm() {
             name="channel"
             onChange={formik.handleChange}
             value={formik.values.channel}
+            onBlur={formik.handleBlur}
           />
           {formik.errors.channel ? (
             <div id="error"> {formik.errors.channel} </div>
