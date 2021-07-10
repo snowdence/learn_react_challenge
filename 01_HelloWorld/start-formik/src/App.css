@@ -28,7 +28,7 @@ textarea {
   margin-bottom: 20px;
 }
 
-.error {
+#error {
   color: red;
 }
 
