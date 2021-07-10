@@ -42,3 +42,11 @@ button {
 button:active {
   border: 1px solid #a5e7d6;
 }
+
+#add-phone {
+  margin-left: 10px;
+}
+
+#remove-phone {
+  margin-left: 10px;
+}

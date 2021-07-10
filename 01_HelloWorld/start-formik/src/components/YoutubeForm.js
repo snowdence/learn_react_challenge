@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
 import TextError from "./custom-form/TextError";
 
@@ -24,6 +24,7 @@ const initialValues = {
     twitter: "",
   },
   phoneNumber: ["", ""],
+  phNumbers: [""],
 };
 function YoutubeForm() {
   return (
@@ -97,6 +98,45 @@ function YoutubeForm() {
           <div className="form-control">
             <label htmlFor="phone2">PhoneNumber 2</label>
             <Field type="text" id="phone2" name="phoneNumber[1]" />
+          </div>
+
+          <div className="form-control">
+            <label>List of phone numbers</label>
+            <FieldArray name="phNumbers">
+              {(fieldArrayProps) => {
+                const { push, remove, form } = fieldArrayProps;
+                const { values } = form;
+                const { phNumbers } = values;
+
+                return (
+                  <div>
+                    {phNumbers.map((phNumber, index) => {
+                      return (
+                        <div key={index}>
+                          <Field name={`phNumbers[${index}]`} />
+                          <button
+                            type="button"
+                            id="remove-phone"
+                            onClick={() => remove(index)}
+                          >
+                            {" "}
+                            -{" "}
+                          </button>
+                          <button
+                            type="button"
+                            id="add-phone"
+                            onClick={() => push(index)}
+                          >
+                            {" "}
+                            +{" "}
+                          </button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                );
+              }}
+            </FieldArray>
           </div>
 
           <button type="submit">Submit</button>
