@@ -10,9 +10,13 @@ import {
 import * as Yup from "yup";
 import TextError from "./custom-form/TextError";
 
-const onSubmit = (values) => {
+const onSubmit = (values, onSubmitProps) => {
   console.log("onSubmit()");
   console.log(values);
+  console.log(onSubmitProps);
+  setTimeout(() => {
+    onSubmitProps.setSubmitting(false);
+  }, 3000);
 };
 const validateComments = (value) => {
   let error;
@@ -170,7 +174,9 @@ function YoutubeForm() {
               <button type="button" onClick={() => formik.validateForm()}>
                 Validate field
               </button>
-              <button type="submit">Submit</button>
+              <button type="submit" disabled={formik.isSubmitting}>
+                Submit
+              </button>
             </Form>
           );
         }}
