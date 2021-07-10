@@ -16,6 +16,8 @@ const initialValues = {
   name: "",
   email: "",
   channel: "",
+  comments: "",
+  address: "",
 };
 function YoutubeForm() {
   return (
@@ -42,6 +44,28 @@ function YoutubeForm() {
             <label htmlFor="name">Channel</label>
             <Field type="text" id="channel" name="channel" />
             <ErrorMessage name="channel" />
+          </div>
+          <div className="form-control">
+            <label htmlFor="comments">Comments</label>
+            <Field as="textarea" id="comments" name="comments"></Field>
+          </div>
+
+          <div className="form-control">
+            <label htmlFor="address">Address</label>
+            <Field name="address">
+              {(props) => {
+                const { field, form, meta } = props;
+                //console.log(props);
+                return (
+                  <div>
+                    <input id="address" type="text" {...field} />
+                    {meta.touched && meta.error ? (
+                      <div>{meta.error}</div>
+                    ) : null}
+                  </div>
+                );
+              }}
+            </Field>
           </div>
 
           <button type="submit">Submit</button>
